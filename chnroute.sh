@@ -1,11 +1,11 @@
-#!/bin/bash
+#!/bin/sh
 
 OUTPUT_FILEPATH=chnroute.txt
 LOCAL_ADDR_ENABLED=false
 MERGE_FILE=
 SLIENT=
 
-function help() {
+help() {
     echo " Usage: $0 [-l] [-m merge.txt] [output.txt]"
     echo " -l: add local domain ip address"
     echo " -m: merge file from merge.txt"
@@ -53,8 +53,9 @@ if [ ! -z "$MERGE_FILE" ]; then
     cat $MERGE_FILE >> $OUTPUT_FILEPATH
 fi
 
-if [ $LOCAL_ADDR_ENABLED="true" ]; then
+if [ $LOCAL_ADDR_ENABLED = "true" ]; then
     echo "10.0.0.0/8" >> $OUTPUT_FILEPATH
     echo "172.16.0.0/12" >> $OUTPUT_FILEPATH
     echo "192.168.0.0/16" >> $OUTPUT_FILEPATH
 fi
+
