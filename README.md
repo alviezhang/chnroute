@@ -13,3 +13,7 @@ Usage: ./chnroute.sh [-l] [-m merge.txt] [output.txt]
     output.txt: chnroute output file, default is 'chnroute.txt'
 
 ```
+
+## Reference
+
+Greate thanks to clowwindy's work <https://github.com/shadowsocks/ChinaDNS/#about-chnroute>
